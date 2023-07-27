@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HistoryActivity"
+    android:background="@color/colorPink">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_title"
+        android:text="History"
+        android:textSize="50sp"
+        android:textColor="@color/colorPrimaryDark"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_date"
+        android:text="Date (Number) : "
+        android:textSize="30sp"
+        android:textColor="@color/colorHeading"
+        android:layout_below="@id/tv_title"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_year"
+        android:textSize="25sp"
+        android:textColor="@color/colorHeading"
+        android:layout_below="@id/tv_date"
+        android:text="Year : " />
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_year"
+        android:textSize="25sp"
+        android:inputType="number"
+        android:layout_toRightOf="@id/tv_year"
+        android:layout_below="@id/tv_date" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_month"
+        android:textSize="25sp"
+        android:textColor="@color/colorHeading"
+        android:layout_toRightOf="@id/et_year"
+        android:layout_below="@id/tv_date"
+        android:text="Month : " />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_month"
+        android:textSize="25sp"
+        android:inputType="number"
+        android:layout_toRightOf="@id/tv_month"
+        android:layout_below="@id/tv_date" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_day"
+        android:textSize="25sp"
+        android:textColor="@color/colorHeading"
+        android:layout_toRightOf="@id/et_month"
+        android:layout_below="@id/tv_date"
+        android:text="Day : " />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_day"
+        android:textSize="25sp"
+        android:inputType="number"
+        android:layout_toRightOf="@id/tv_day"
+        android:layout_below="@id/tv_date" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_search"
+        android:text="Search"
+        android:textSize="20sp"
+        android:layout_below="@id/et_month"
+        android:layout_toRightOf="@id/tv_month"
+        android:background="@drawable/selector_button"
+        android:textColor="#ffffff"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_search"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:id="@+id/load_history"
+            android:textSize="25sp"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>
